@@ -5,16 +5,28 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+            <style>
+                #placeholder {
+                    height: 360px;
+                    object-fit: cover;
+                    width: 100%;
+                }
+            </style> 
     </head>
     <body>
         <div class="container">
-        <h1>Hello, this is my first website following a code along</h1>
+        <h1 class="text-center">Hello, this is my first website following a code along</h1>
         <img class="img-fluid" id="placeholder" src="http://127.0.0.1:5000/static/placeholder.png" height="320">
-        <h2>About me</h2>
+        <h2 class="text-center">About me</h2>
         <p class="bodytext">dhufhisfudhfuhauhuisfhusfiuhf. aushiaushd, uashdua, sadad. dsda.</p>
-        <div style="text-align: center;">
-        <button>info</button>
-        <p>2023, ant</p>
+        <div>
+            {% for rng in rnginfo %}
+            <div>{{rng['title']}}</div>
+            {% endfor %}
+        </div>
+        <div class="text-center">
+        <button class="btn btn-primary btn-lg">info</button>
+        <p class="lead mt-4">2023, ant</p>
         </div>
         </div>
     </body>
